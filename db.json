@@ -1,0 +1,26 @@
+{
+
+	"Animals":[
+		{"id":1,
+			"name":"Tiger",
+			"heartRate" : "72 bpm",
+			"location": {
+				"id":1,
+				"lat":29.99161,
+				"lng":78.2893434
+			}
+		},
+
+		{"id":2,
+			"name":"Hyena",
+			"heartRate" : "82 bpm",
+			"location": 
+			{	"id":1,
+				"lat": 29.98163,
+				"lng": 78.2993434
+			}
+		}
+
+	]
+	
+}
