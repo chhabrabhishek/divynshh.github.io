@@ -7,6 +7,8 @@ export class Animals {
     location: Position;
     prevLocations: Position[];
     showPath:boolean= false;
+    temperature:number;
+    
 
     
 }

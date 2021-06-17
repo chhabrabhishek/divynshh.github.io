@@ -1,0 +1,31 @@
+
+
+  <mat-card  class="Status-Card">
+
+    
+    <mat-card-header>
+      
+
+      <mat-card-title>{{animal.name}}</mat-card-title>
+      <mat-card-subtitle style="color: black;">Status and Vitals</mat-card-subtitle>
+      
+    </mat-card-header>
+    <mat-card-content style="padding-left: 18px; color: black;">
+      
+     Current Temperature : {{animal.Temperature}} F
+     
+    </mat-card-content>    
+    
+    <h2 class="blink_me" *ngIf ="this.animal.isInDanger" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: red;">
+      
+      <span *ngFor="let danger of dangerCategories">
+      {{danger}}
+      <br>
+    </span>
+      
+    </h2>
+    <button *ngIf = "this.animal.isInDanger" mat-raised-button color="warn" (click)="openSnackBar('Concerned Authorities have been informed')">Inform Authorities</button>
+  
+    <br>
+  </mat-card>
+
