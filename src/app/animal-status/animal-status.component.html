@@ -24,8 +24,19 @@
     </span>
       
     </h2>
-    <button *ngIf = "this.animal.isInDanger" mat-raised-button color="warn" (click)="openSnackBar('Concerned Authorities have been informed')">Inform Authorities</button>
+    <!-- <button *ngIf = "this.animal.isInDanger" mat-raised-button color="warn" (click)="openSnackBar('Concerned Authorities have been informed')">Inform Authorities</button> -->
   
+    <button *ngIf = "this.animal.isInDanger" mat-raised-button color="warn" (click)="openDialog()">Inform Authorities</button>
+    
+<span *ngIf = "isDeer(this.animal)">
+  <h2 class="blink_me"  style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: red;">
+      
+    The Animal is in the Proximity of a Predator.
+
+  </h2>
+  <button  mat-raised-button color="warn" (click)="openDialog()">Inform Authorities</button>
+</span>
+
     <br>
   </mat-card>
 

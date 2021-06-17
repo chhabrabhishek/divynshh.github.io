@@ -1,0 +1,25 @@
+<div>
+<h1 mat-dialog-title>Inform</h1>
+
+
+<div mat-dialog-content>
+            <mat-form-field  >
+                <mat-label style="color: white;">Id</mat-label>
+                <input matInput>
+              </mat-form-field>
+<br>
+<div mat-dialog-content>
+
+    <mat-form-field  >
+        <mat-label>Info</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+  </div>
+        
+    
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close (click)="openSnackBar('Concerned Authorities have been informed')">Submit</button>
+  <button mat-button mat-dialog-close>Close</button>
+</div>

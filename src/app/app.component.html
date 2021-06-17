@@ -346,6 +346,10 @@
     [radius]=circleRadius [fillColor]="'cyan'" [fillOpacity]="0.3" [circleDraggable]="false" [editable]="false">
     </agm-circle>
 
+    <agm-circle [latitude]=28.654169 [longitude]=77.272212 
+    [radius]=40 [fillColor]="'red'" [fillOpacity]="0.3" [circleDraggable]="false" [editable]="false">
+    </agm-circle>
+
     <!-- <Static Markers> -->
 <span *ngFor="let animal of animals; let i = index" >
     <agm-marker 
@@ -356,6 +360,7 @@
     [markerClickable]="true"
     (markerClick)="markerClicked(animal)"
     [iconUrl] = "getIconURL(animal)"
+    [animation] = "getAnimation(animal)"
     >
 
     <agm-info-window [isOpen]=true [disableAutoPan]="true" >

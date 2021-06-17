@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Animal } from '../Animal';
 import { Animals } from '../Animals-Model';
-
+import {MatDialog} from '@angular/material/dialog';
 @Component({
   selector: 'app-animal-status',
   templateUrl: './animal-status.component.html',
@@ -21,12 +21,20 @@ export class AnimalStatusComponent implements OnInit {
     });
     
   }
-  constructor(private _snackBar: MatSnackBar) { }
+  constructor(private _snackBar: MatSnackBar,public dialog: MatDialog) { }
 
   ngOnInit(): void {
 
     
 
+  }
+
+  isDeer(animal){
+    if(animal.name=='Deer'){
+      return true;
+    }else{
+      return false;
+    }
   }
 
   getIsInDanger(){
@@ -38,4 +46,26 @@ export class AnimalStatusComponent implements OnInit {
     return this.isInDanger;
   }
 
+
+  openDialog() {
+    this.dialog.open(DialogElementsExampleDialog);
+  }
+
 }
+  
+  
+  @Component({
+    selector: 'dialog-elements-example-dialog',
+    templateUrl: 'dialog-elements-example-dialog.html',
+  })
+  export class DialogElementsExampleDialog {
+
+    constructor(private _snackBar: MatSnackBar) { }
+
+  openSnackBar(message: string) {
+    this._snackBar.open(message,'OK', {
+      duration: 3000
+    });
+    
+  }
+  }

@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
 			"name":"Deer",
 			"heartRate" : "82 bpm", 
 			"Latitude": "28.654070",
-      "Longitude": " 77.272659",
+      "Longitude": "77.272659",
 			"Temperature": 98
 		},
     {	"id":300,
@@ -309,6 +309,16 @@ getIconURL(animal){
       break;
   }
   
+}
+
+getAnimation(animal){
+
+  if(animal.name == 'Deer'){
+
+    return 'BOUNCE';
+  }else{
+    return null;
+  }
 }
 
 }

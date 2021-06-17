@@ -7,26 +7,33 @@ import { MatCardModule } from '@angular/material/card'
 import { MatSnackBarModule } from '@angular/material/snack-bar'
 import { AgmCoreModule, GoogleMapsAPIWrapper, MarkerManager } from '@agm/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AnimalStatusComponent } from './animal-status/animal-status.component';
+import { AnimalStatusComponent, DialogElementsExampleDialog } from './animal-status/animal-status.component';
 import { MatButtonModule } from '@angular/material/button';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms'
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule} from '@angular/material/input';
+
+import {MatDialogModule} from '@angular/material/dialog';
+import { MatFormFieldModule, MatLabel } from '@angular/material/form-field';
 @NgModule({
   declarations: [
     AppComponent,
-    AnimalStatusComponent
+    AnimalStatusComponent,
+    DialogElementsExampleDialog
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    MatInputModule,
     MatSnackBarModule,
     FormsModule,
+    MatDialogModule,
     MatSlideToggleModule,
     ReactiveFormsModule,
     MatButtonModule,
     MatCardModule,
+    MatFormFieldModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBhFTNcSaK1b8WKNHzRNdet8FhIPb_nmi0'
     }),
@@ -34,8 +41,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
   ],  exports: [
     BrowserModule,
     AppRoutingModule,
+    MatInputModule,
     HttpClientModule,
+    MatDialogModule,
     MatSnackBarModule,
+    MatFormFieldModule,
     FormsModule,
     MatSlideToggleModule,
     MatButtonModule,
