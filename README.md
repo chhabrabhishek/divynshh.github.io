@@ -31,7 +31,7 @@ npm i
       flask run --host=0.0.0.0
 ```
 
-## Development server
+## Running the app
 
 Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
